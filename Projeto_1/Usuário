@@ -1,0 +1,21 @@
+{
+"_id" : 1,
+"nome" : "Pâmela Apolinario"
+"idade" : 30,
+"data_nascimento" : "1992-10-05",
+
+"enderecos" : [{
+"lagradouro" : "Via Orlando...",
+"numero" : 123,
+"bairro" : "Park Imprerador",
+"cidade" : "Araraquara",
+}]
+
+"interessses" :  ["Kart", "Culinaria"],
+"reversas" : [{
+"data" : "2023-10-10",
+"status" : "pendente",
+"destino" : ObjectId("123")
+}]
+
+}

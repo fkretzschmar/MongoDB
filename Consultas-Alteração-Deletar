@@ -1,0 +1,33 @@
+#A consulta ira retornar dos com nome "Felipe"
+db.usuarios.find({"nome" : "Felipe"})
+
+#Consulta ira retornar o primeiro documento com id 123
+db.usuarios.findOne({"_id" : "123"})
+
+#Consulta ira alterar o nome do documento do primeiro documento com a informação compativel.
+db.usuarios.findOneAndUpdate({"nome" : "Felipe"}, {$set: {"nome" : "Felipe Kretzschmar"}})
+
+Consulta ira alterar todos os documentos para idade 33
+db.usuarios.updateMany({"nome" : "Pamela"}, {$set: {idade: 33}})
+
+#Consulta ira deletar o documento que possui o campo informado
+db.usuarios.findOneAndDelete({"nome" : "Felipe Kretzschmar"})
+
+_________________________________________________________________________________________________
+
+#Inserir primeiras informações em uma array
+db.usuarios.updateMany({"nome" : "Pamela"}, {$set: {"interesses" : ["cerveja"]}})
+
+#Inserir mais informações em um array
+db.usuarios.updateMany({"nome" : "Pamela"}, {$push: {"interesses" : "culinaria"}})
+
+_______________________________________________________________________________________________
+#Adicionar um novo campo no documento
+db.usuarios.updateMany({"nome" : "Pamela"}, {$set: {"viagens" : 0}})
+
+#Inserir o valor 1 em viagens
+db.usuarios.updateMany({"nome" : "Pamela"}, {$inc: {"viagens" : 1}})
+
+#Inserir o valor 2 em viagens incrementado com o 1 o valor sera 3
+db.usuarios.updateMany({"nome" : "Pamela"}, {$inc: {"viagens" : 2}})
+

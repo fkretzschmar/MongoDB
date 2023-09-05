@@ -1,3 +1,35 @@
+$eq  : ==
+$ne  : !=
+$gt  : >
+$gte : >= 
+$lt  : <
+$lte  : <=
+$in  : []
+$nin  : []
+
+______________________________________________________________________________________________________________________________
+
 #Consulta utilizando AND, lembrando que iremos utilizar um array
 {$and: [{idade:20}, {nome:"Carlos"}]}
+ou
+{$and: [{idade:{$eq: 20}}, {nome:"Carlos"}]}
+
+
+#Consulta utilizando OR
+{$or: [{idade:20}, {nome:"Carlos"}]}
+ou
+{$or: [{$and: [{idade:20}, {nome: "Rebeca"}]}, {nome:"Carlos"}]}
+
+
+#Consulta todos com a idade maior de 18 anos
+{idade: {$gt:18}}
+
+#Consulta dentro de um array, vai trazer todos os documento das cidades declaradas
+{cidade: {$in: ["São Paulo", "Belo Horizonte"]}}
+
+
+# NOT Consulta dentro de um array, vai trazer todos os documento que não possui as cidade declaradas.
+{cidade: {$nin: ["Osasco", "Carapicuiba"]}}
+
+
 

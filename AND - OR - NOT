@@ -1,0 +1,3 @@
+#Consulta utilizando AND, lembrando que iremos utilizar um array
+{$and: [{idade:20}, {nome:"Carlos"}]}
+

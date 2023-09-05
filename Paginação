@@ -1,0 +1,1 @@
+db.usuarios.find().skip(10).limit(5)

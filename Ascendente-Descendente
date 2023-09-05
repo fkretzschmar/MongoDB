@@ -1,0 +1,3 @@
+(1)Ascendente        (-1)Descendente
+
+db.usuario.find({cidade: {$nin: ["São Paulo"]}}, {nome:1}).sort({idade:1})
